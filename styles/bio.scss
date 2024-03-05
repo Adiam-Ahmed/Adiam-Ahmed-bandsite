@@ -1,6 +1,9 @@
 @use "./partials/typography";
 
-h1{
+body{
     font-family: "Avenir Next Bold";
     font-weight: 700;
+}
+img{
+    height: 20vh;
 }
