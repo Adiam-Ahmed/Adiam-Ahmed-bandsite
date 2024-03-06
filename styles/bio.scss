@@ -1,9 +1,86 @@
 @use "./partials/typography";
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 body{
-    font-family: "Avenir Next Bold";
-    font-weight: 700;
+    font-family: "Avenir Next";
 }
 img{
     height: 20vh;
+}
+.site-header{
+    background: #323232 ;
+    margin: 0;
+    
+}
+.site-header__logo{
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+}
+.main-nav__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.main-nav__link{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.main-nav__link--active{
+    border-bottom: 4px solid #FFFFFF;
+}
+.hero-banner{
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    min-height: 150px;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-banner__slogan{
+    color: #FFFFFF;
+}
+.site-article__img{
+    width: 80vw;
+    height: 50vh;
+}
+.gallery{
+    background-color: #FAFAFA;
+}
+
+.gallery__images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+.gallery__image{
+    max-width: 100%;
+    height: auto;
+    margin: 30px;
+}
+.footer{
+    background: #323232;
+    color: #FFFFFF;
+}
+.footer__title{
+    margin-bottom: 20px;
+    
+}
+.footer__icon{
+    width: 35px;
+    height: 30px;
+    margin: 20px;
+}
+.footer__subtitle{
+    color: aqua;
+    margin: 20px 0;
 }
