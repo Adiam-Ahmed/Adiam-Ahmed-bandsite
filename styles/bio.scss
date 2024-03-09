@@ -1,86 +1,157 @@
-@use "./partials/typography";
+@use "./partials/typography" as *;
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    // border: 2px dotted red;
+
 }
 body{
     font-family: "Avenir Next";
+    margin: 0;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Avenir Next";
+    font-weight: 400;
 }
 img{
-    height: 20vh;
+    max-width: 100%;
 }
+
 .site-header{
-    background: #323232 ;
-    margin: 0;
-    
+    background: $primary-bgcolor;
+    width: 100%;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__logo{
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $primary-header-text-color;
+        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-header-text-weight);
+ 
+    }
 }
-.site-header__logo{
-    color: #FFFFFF;
-    text-decoration: none;
-    text-align: center;
+.main-nav{
+    &__list{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+    &__link{
+        color: $primary-header-text-color;
+        text-decoration: none;
+        padding: 0 5.3rem;
+        border-bottom: 2px solid transparent;
+        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-subheader-text-weight);
+
+        &:hover{         
+            border-bottom: 4px solid #FFFFFF;
+        }
+        &--active{
+            border-bottom: 4px solid #FFFFFF;
+        }
+    }
+
 }
-.main-nav__list{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style: none;
-}
-.main-nav__link{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-.main-nav__link--active{
-    border-bottom: 4px solid #FFFFFF;
-}
+
 .hero-banner{
     background-image: url(../assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
-    height: 80vh;
-    min-height: 150px;
-    max-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        min-height: 35vh;
+        max-width: 50rem;
+    }
+
+    &__title {
+        margin: 1.875rem;
+        font-size: 25px;
+        color: $primary-header-text-color;
+        @include text-styles($mobile-header-text-size,
+            $mobile-header-line-height,
+            $mobile-subheader-text-weight);     
+    }
 }
-.hero-banner__slogan{
-    color: #FFFFFF;
+.site-article{
+    &__header{
+        margin: 1.875rem;
+        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-header-text-weight);
+    }
+    &__img{
+        margin: 1.875rem;
+        width: 80vw;
+    }
+    &__paragraph{
+        margin: 1.875rem;
+        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-subheader-text-weight);
+    }
 }
-.site-article__img{
-    width: 80vw;
-    height: 50vh;
+.site-main{
+    &__header{
+        margin: 1.875rem;
+    }
+    &__description{
+        margin: 1.875rem;
+        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-body-text-weight);
+    }
 }
 .gallery{
-    background-color: #FAFAFA;
+    margin: 0;
+    background-color: $gallery-bgcolor;
+    width: 100vw;
+    &__header{
+        margin: 1.875rem;
+        @include text-styles($mobile-header-text-size,
+                $mobile-header-line-height,
+                $mobile-subheader-text-weight);
+    }
+    &__images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
+    &__image{
+        max-width: 100%;
+        height: auto;
+        margin: 30px;
+
+    }
 }
 
-.gallery__images{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%
-}
-.gallery__image{
-    max-width: 100%;
-    height: auto;
-    margin: 30px;
-}
 .footer{
-    background: #323232;
-    color: #FFFFFF;
-}
-.footer__title{
-    margin-bottom: 20px;
+    background: $primary-bgcolor;
+    color: $primary-header-text-color;
+    padding: 1.875rem;
+    &__title {
+            margin-bottom: 68px;
     
-}
-.footer__icon{
-    width: 35px;
-    height: 30px;
-    margin: 20px;
-}
-.footer__subtitle{
-    color: aqua;
-    margin: 20px 0;
+        }
+    &__icon {
+        width: 35px;
+        height: 30px;
+        margin: 20px;
+    }
+    &__subtitle {
+        margin: 20px 0;
+    }
 }

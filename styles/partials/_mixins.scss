@@ -1,0 +1,27 @@
+@use './variables' as *;
+
+@mixin text-styles($text-size, $line-height, $text-weight){
+    font-size: $text-size;
+    line-height: $line-height;
+    font-weight: $text-weight;
+}
+
+
+@mixin mobile{
+    @media(max-width:$mobile-width){
+        @content
+    }
+}
+
+@mixin tablet{
+    @media(max-width:$tablet-width){
+        @content
+    }
+}
+
+@mixin desktop{
+    @media(max-width: $desktop-width){
+        @content
+    }
+}
+
