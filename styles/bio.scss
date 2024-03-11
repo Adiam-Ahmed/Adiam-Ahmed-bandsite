@@ -8,98 +8,13 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Avenir Next";
-    margin: 0;
-    padding: 0;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Avenir Next";
-    font-weight: 400;
-}
-
-img {
-    max-width: 100%;
-}
-
-.site-header {
-    background: $primary-bgcolor;
-    width: 100%;
-    min-width: 18.75rem;
-
-    &__container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0 auto;
-
-        @include tablet {
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: baseline;
-            gap: 50px;
-        }
-
-        @include desktop {
-            gap: 100px;
-        }
-    }
-
-    &__logo {
-        display: inline-flex;
-        margin: 1.875rem;
-        font-size: 1.5rem;
-        padding: 0.625rem;
-        text-decoration: none;
-        color: $primary-header-text-color;
-        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-header-text-weight);
-    }
-}
-
-.main-nav {
-    &__list {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    &__link {
-        color: $primary-header-text-color;
-        text-decoration: none;
-        display: inline-flex;
-        padding: 1.25rem 4.5rem;
-        border-bottom: 2px solid transparent;
-        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-subheader-text-weight);
-
-        @include tablet {
-            padding: 2.50rem 0.5rem;
-            margin-right: 1.25rem;
-        }
-
-        @include desktop {
-            margin-right: 2.25rem;
-        }
-
-        &:hover,
-        &--active {
-            border-bottom: 4px solid #FFFFFF;
-        }
-    }
-}
-
 .hero-banner {
     background-image: url(../assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    height: 50vh;
     min-height: 35vh;
     min-width: 50rem;
 
@@ -125,7 +40,7 @@ img {
         }
 
         @include desktop {
-            font-size: 85p;
+            font-size: 85px;
         }
     }
 }
@@ -162,7 +77,6 @@ img {
 
     &__img {
         width: 100%;
-        padding: 0 2rem;
         padding-bottom: 2rem;
         max-height: 20rem;
 
@@ -173,17 +87,24 @@ img {
 
     &__paragraph {
         padding-bottom: 1.5rem;
+        @include text-styles($mobile-subheader-text-size, $mobile-subheader-line-height, $mobile-subheader-text-weight);
+        @include text-styles($tablet-header-text-size,$tablet-header-line-height,$tablet-header-text-weight)
+        
     }
 
     &__author {
+        @include text-styles($mobile-subheader-text-size, $mobile-subheader-line-height, $mobile-subheader-text-weight);
         @include tablet {
-            font-size: 2rem;
+            @include text-styles($tablet-subheader-text-size, $tablet-subheader-line-height, $tablet-subheader-text-weight);
         }
     }
 
     &__header {
         padding: 1.5rem 0 0.5rem 0;
-        font-weight: 600;
+        font-weight: 400;
+        @include tablet {
+            @include text-styles($tablet-title-text-size, $tablet-title-line-height, $tablet-title-text-weight);
+        }
     }
 
     .site-article {
@@ -208,7 +129,7 @@ img {
     &__container {
         display: flex;
         flex-direction: column;
-        padding-block: 1rem;
+        padding: 3rem;
 
         @include tablet {
             padding: 3rem 2rem;
@@ -216,7 +137,7 @@ img {
     }
 
     &__title {
-        padding-bottom: 1rem;
+        padding-bottom: 1.25rem; 
         @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-subheader-text-weight);
 
         @include tablet {
@@ -253,109 +174,3 @@ img {
     }
 }
 
-.footer {
-    
-
-    &__container {
-        color: $primary-header-text-color;
-        padding-left: 1.875rem;
-        display: flex;
-        flex-direction: column;
-        background: $primary-bgcolor;
-        width: 100%;
-
-        @include tablet {
-            margin: 1rem;
-            padding: 2rem;
-        }
-    }
-
-    &__header-container {
-        @include tablet {
-            padding: 3rem 0;
-            display: flex;
-            align-items: baseline;
-            justify-content:space-around;
-            width: 100%;
-        
-        }
-    }
-
-    &__main-title {
-        @include tablet {
-            font-size: 3rem;
-        }
-    }
-
-    &__icons {
-        @include tablet {
-            padding: 0 1rem;
-            max-width: 15rem;
-            width: 25%;
-            align-items: center;
-        }
-        
-    }
-
-    &__link {
-        text-decoration: none;
-        color: white;
-    }
-
-    &__icon {
-        width: 35px;
-        height: 30px;
-        margin-right: 1.25rem;
-        @include desktop {
-            background-color: aqua;
-        
-        }
-    }
-
-    &__logo {
-        text-decoration: none;
-        color: $primary-header-text-color;
-        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-header-text-weight);
-    }
-
-    &__logo-right {
-        display: none;
-
-        @include tablet {
-            display: block;
-        }
-    }
-
-    &__logo-tablet {
-        @include tablet {
-            display: none;
-        }
-    }
-
-    &__column-container {
-        display: flex;
-        flex-wrap: wrap;
-        
-        @include tablet {
-            margin-left: 10%;
-        }
-        @include desktop {
-            width: 70%;
-            background-color: brown;
-        }
-    }
-
-    &__column {
-        flex: 1 1 100%;
-        @include tablet {
-            flex: 1 1 33.333%;
-        }
-    
-    }
-    .footer__copyright{
-        @include tablet{
-            padding-left: 10%
-        }
-        
-    }
-}
