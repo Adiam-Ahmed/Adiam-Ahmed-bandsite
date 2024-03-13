@@ -174,3 +174,60 @@
     }
 }
 
+
+.comment-section {
+    background-color: beige;
+    height: 100vh;
+
+    &__title {
+        margin: 20px;
+        font-size: 3rem;
+    }
+
+    .comment-form {
+        margin: 30px;
+
+        &__avatar {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin: 20px;
+        }
+
+        &__section {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            width: 80%;
+        }
+
+        &__label,
+        &__comment-field {
+            padding: 10px 0;
+        }
+
+        &__name-input,
+        &__comment-input {
+            padding: 10px;
+            &::placeholder {
+                color: black;
+            }
+
+        }
+
+        &__comment-input {
+            line-height: 2rem;
+            resize: none;
+        }
+
+        &__button {
+            margin-top: 20px;
+            padding: 20px;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+        }
+    }
+
+}

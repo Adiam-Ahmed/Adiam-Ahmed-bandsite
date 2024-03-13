@@ -185,7 +185,6 @@ img {
 
         }
     }
-
     &__column {
         @include tablet {
             margin-left: 1.25rem;
@@ -194,10 +193,9 @@ img {
      
 
     }
-
     .footer__copyright {
         @include tablet {
-            padding-left: 8rem;
+            padding-left: 12%;
         }
 
     }
