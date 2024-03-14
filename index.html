@@ -6,6 +6,7 @@
     <title>BandSite</title>
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/bio.css" />
+    <script src="./scripts/index-page.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -121,32 +122,94 @@
       </div>
     </section>
 
-    <section class="comment-section">
+    <section class="comment-form-section">
       <h2 class="comment-section__title">Join the Conversation</h2>
 
-      <div class="comment-form">
-        <img class="comment-form__avatar" src="./assets/Images/avatar.JPG" alt="avatar img" />
+      <div class="comment-container">
+        <img
+          class="comment-container__avatar"
+          src="./assets/Images/avatar.JPG"
+          alt="avatar img"
+        />
 
-        <form class="comment-form__section">
-          <label for="name" class="comment-form__label">NAME</label>
-          <input
-            type="text"
-            id="name"
-            class="comment-form__name-input"
-            placeholder="Enter your name"
-          />
-          <label for="comment" class="comment-form__comment-field"
-            >COMMENT</label
-          >
-          <textarea
-            id="comment"
-            class="comment-form__comment-input"
-            rows="5"
-            placeholder="Add a new comment "
-          ></textarea>
-          <button type="submit" class="comment-form__button">COMMENT</button>
+        <form class="comment-form">
+          <div class="comment-form__input-container">
+            <label for="userNameId" class="comment-form__label">NAME</label>
+            <input
+              class="comment-form__name-input"
+              type="text"
+              name="userName"
+              id="userNameId"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div class="comment-form__input-container">
+            <label for="commentId" class="comment-form__label">COMMENT</label>
+            <textarea
+              class="comment-form__comment-input"
+              type="text"
+              name="userComment"
+              id="commentId"
+              rows="5"
+              placeholder="Add a new comment "
+            ></textarea>
+          </div>
+          <div>
+            <button class="comment-form__button" type="submit">COMMENT</button>
+          </div>
         </form>
       </div>
+
+      <section class="user-comment">
+        <div class="user-comment__avatar"></div>
+        <div class="user-comment__content">
+          <div class="user-comment__details">
+            <h3 class="user-comment__name">Victor Pinto</h3>
+            <p class="user-comment__date">11 /02 / 2023</p>
+          </div>
+          <div class="user-comment__paragraph">
+            <p>
+              This is art. This is inexplicable magic expressed in the purest
+              way, everything that makes up this majestic work deserves
+              reverence. Let us appreciate this for what it is and what it
+              contains.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="user-comment">
+        <div class="user-comment__avatar"></div>
+        <div class="user-comment__content">
+          <div class="user-comment__details">
+            <h3 class="user-comment__name">Christina Cabrera</h3>
+            <p class="user-comment__date">10/28/2023</p>
+          </div>
+          <div class="user-comment__paragraph">
+            <p>
+              I feel blessed to have seen them in person. What a show! They were
+              just perfection. If there was one day of my life I could relive,
+              this would be it. What an incredible day.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="user-comment">
+        <div class="user-comment__avatar"></div>
+        <div class="user-comment__content">
+          <div class="user-comment__details">
+            <h3 class="user-comment__name">Isaac Tadesse</h3>
+            <p class="user-comment__date">10/20/2023</p>
+          </div>
+          <div class="user-comment__paragraph">
+            <p>
+              I can't stop listening. Every time I hear one of their songs - the
+              vocals - it gives me goosebumps. Shivers straight down my spine.
+              What a beautiful expression of creativity. Can't get enough.
+            </p>
+          </div>
+        </div>
+      </section>
     </section>
 
     <footer class="footer">
