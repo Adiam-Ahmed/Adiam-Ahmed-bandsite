@@ -6,7 +6,10 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    border: 1px dotted red;
 }
+
+
 
 .hero-banner {
     background-image: url(../assets/Images/hero-bio.jpg);
@@ -31,7 +34,7 @@
         top: 50%;
         left: 0;
         margin: 1.875rem;
-        font-size: 1.5625rem;
+        font-size: 1.30rem;
         color: $primary-header-text-color;
         @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-subheader-text-weight);
 
@@ -40,7 +43,7 @@
         }
 
         @include desktop {
-            font-size: 85px;
+            font-size: 2rem;
         }
     }
 }
@@ -62,7 +65,6 @@
     &__container {
         display: flex;
         flex-direction: column;
-        max-width: 60rem;
         margin: auto;
         padding: 0 1rem;
 
@@ -203,7 +205,7 @@ textarea,
 button {
     font-size: 1.25rem;
     padding: 1rem;
-    width: 80vw;
+    width: 100%;
     border-radius: 10px;
     border: 1px solid gray;
 }
@@ -223,17 +225,21 @@ button {
     display: flex;
     padding-top: 2rem;
     gap: 20px;
+    width: 100%;
+    min-width: 230px;
 
     &__avatar {
         border-radius: 50%;
         width: 50px;
         height: 50px;
-        float: left;
         margin: 40px 0;
     }
 }
 
 .comment-form {
+    width: 90%;
+    justify-content: center;
+
     &__label {
         color: grey;
     }
@@ -257,14 +263,14 @@ button {
 
 .user-comment {
     display: flex;
-    border-top: 2px solid gray;
+    border-top: 2px solid lightgray;
     padding: 1.2rem 0;
-    width: 89vw;
+
 
     &__content {
         display: flex;
         flex-direction: column;
-
+        width: 90%;
     }
 
     &__avatar {
@@ -279,6 +285,16 @@ button {
     &__details {
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 0.8rem;
+    }
+    &__name{
+        font-weight: 600;
+
+    }
+    &__date{
+        color: grey;
+    
     }
 
 }
