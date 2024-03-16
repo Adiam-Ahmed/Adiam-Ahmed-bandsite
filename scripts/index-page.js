@@ -19,30 +19,29 @@ const commentArray = [
     }
 ];
 
-commentForm.addEventListener('submit',function(e){
+commentForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const userNameVal = e.target.userName.value
     const commentVal = e.target.userComment.value
-    const commentDate = new Date().toLocaleString();
-
-
-    const newCommentsObj= {
+    const date = new Date()
+    const formattedDate = `${date.getDate()} / 0${date.getMonth()} / ${date.getFullYear()}`;
+    const newCommentsObj = {
         userName: userNameVal,
-        date: commentDate,
+        date: formattedDate,
         comment: commentVal,
     };
 
     // Add new comment object to comment array
 
-    commentArray.push(newCommentsObj);
+    commentArray.unshift(newCommentsObj);
 
     renderAllComment()
 
     e.target.reset();
 });
 
-function createComment(commentObj){
+function createComment(commentObj) {
 
 
     const commentSectionEl = document.createElement('section');
@@ -75,15 +74,17 @@ function createComment(commentObj){
     userCommentDetails.appendChild(userCommentDate);
 
 
-    
+
+
     const commentDiv = document.createElement('div');
     commentDiv.classList.add('user-comment__paragraph');
     commentDiv.innerText = commentObj.comment
     commentArticleEl.appendChild(commentDiv);
 
+
 }
 
-function renderAllComment(){
+function renderAllComment() {
 
     commentListElement.innerHTML = '';
 
@@ -92,6 +93,5 @@ function renderAllComment(){
     });
 
 };
-
 
 renderAllComment()
