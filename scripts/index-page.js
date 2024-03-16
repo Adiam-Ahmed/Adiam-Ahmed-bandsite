@@ -72,10 +72,6 @@ function createComment(commentObj) {
     userCommentDate.setAttribute('datetime', commentObj.date);
     userCommentDate.innerText = commentObj.date;
     userCommentDetails.appendChild(userCommentDate);
-
-
-
-
     const commentDiv = document.createElement('div');
     commentDiv.classList.add('user-comment__paragraph');
     commentDiv.innerText = commentObj.comment
