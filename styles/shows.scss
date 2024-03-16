@@ -6,6 +6,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    // border: 1px solid red;
 }
 
 body{
@@ -38,37 +39,46 @@ body{
     width: 40%;
     height: 166;
 }
-.shows{
-    // margin: 0 auto;
-    background-color: white;
+.shows-container{
+    padding: 30px 0;
+    &__header{
+        font-size:2rem ;
+        font-weight: 700;
+    }
 }
-.shows__section-heading{
-    margin-left: 2.5rem;
-    
+.shows-list__container{
+    display: flex;
+    flex-direction: column;
 }
-.shows__section-items{
-    list-style: none;
-}
-.shows__table{
+.show{
     border-bottom: 1px solid grey;
-    border-width: 100%;
-}
-.shows__section-info{
-    padding: 20px 0;
-}
-.shows__section-day{
-   color: aqua;
-   font-size: larger;
-}
-.shows__section-info{
-    color: gray;
-}
-.show__button{
-    padding: 15px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    width: 90%;
-    margin: 1rem;
+    &:hover {
+        background-color: grey;
+    }
+    &--selected{
+        background-color: aqua;
+    }
+    &__info{
+        list-style: none;
+
+    }
+    &__info-item{
+        padding: 20px 0;
+        color: grey;
+    }
+    &__info-day{
+        font-weight: 700;
+    }
+    &__info-location{
+        font-weight: 600;
+    }
+    &__button-get-ticket{
+        padding: 15px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        width: 90%;
+        margin: 1rem 2rem;
+    }
 }
