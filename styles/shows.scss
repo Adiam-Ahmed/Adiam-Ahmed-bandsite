@@ -117,6 +117,7 @@ body{
 
     &:hover {
         background-color: #FAFAFA;
+        cursor: pointer;
     }
     &--selected{
         background-color: $mercury;
