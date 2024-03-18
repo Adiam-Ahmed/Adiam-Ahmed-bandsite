@@ -15,14 +15,66 @@ body{
     padding: 0;
 }
 
-.hero-banner{
-    background-image: url(../assets/Images/Photo-gallery-3.jpg);
-    background-position: center;
+.hero {
+    background-image: url(../assets/Images/hero-shows.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    color: white;
     width: 100%;
-    padding: 30px;
+    padding-bottom: 2rem;
+    position: relative;
+
+    @include desktop {
+        height: 80vh;
+    }
+    &__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100rem;
+        position: relative;
+        z-index: 1;
+
+        @include tablet {
+            padding: 3rem;
+            margin-left: 3rem;
+        }
+
+        @include desktop {
+            flex-direction: row;
+
+        }
+    }
+
+    &__title,
+    &__subtitle {
+        padding: 1rem 0;
+        color: $primary-header-text-color;
+
+        @include tablet {
+            max-width: 35rem;
+        }
+        @include desktop {
+            margin-bottom: 1rem;
+            font-size: 32px;
+        }
+    }
+
+    &__desktop-container {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .soundcloud{
@@ -36,35 +88,59 @@ body{
     font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
     Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
     font-weight: 100;
-    width: 40%;
+    width: 60%;
     height: 166;
+    @include tablet{
+        width: 40%;
+    
+    }
 }
 .shows-container{
     padding: 30px 0;
     &__header{
         font-size:2rem ;
         font-weight: 700;
+        margin-left: 2rem;
     }
 }
 .shows-list__container{
     display: flex;
     flex-direction: column;
+    
 }
 .show{
     border-bottom: 1px solid grey;
+    @include tablet{
+        margin: 0 10px;
+        padding: 10px;
+    }
+
     &:hover {
-        background-color: grey;
+        background-color: #FAFAFA;
     }
     &--selected{
-        background-color: aqua;
+        background-color: $mercury;
     }
     &__info{
         list-style: none;
-
+    @include tablet{
+        padding: 0;
+        margin: 0 1.8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    }
+    &__info--tablet{
+        min-width: 8rem;
     }
     &__info-item{
         padding: 20px 0;
         color: grey;
+        @include tablet{
+            display: none;
+        }
     }
     &__info-day{
         font-weight: 700;
@@ -74,11 +150,37 @@ body{
     }
     &__button-get-ticket{
         padding: 15px;
+        border: none;
         margin-bottom: 30px;
         border-radius: 5px;
         background-color: black;
         color: white;
         width: 90%;
         margin: 1rem 2rem;
+        @include tablet{
+            padding: 16px 16px;
+            width: 180px;
+        }
+    }
+}
+
+.shows-tablet{
+    display: none;
+    @include tablet{
+        margin: 0 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-transform: uppercase;
+        list-style: none;
+        align-items: center;
+    }
+    &__item{
+    @include tablet {
+        color: #afafaf;
+        min-width: 17rem;
+        padding-top: 2rem;
+        font-weight: 600;
+    }
     }
 }

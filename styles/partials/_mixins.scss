@@ -6,7 +6,11 @@
     font-weight: $text-weight;
 }
 
-
+@mixin mobile{
+    @media(max-width:$mobile-breakpoint) {
+        @content
+    }
+}
 
 @mixin tablet{
     @media(min-width:$tablet-breakpoint){
@@ -19,4 +23,5 @@
         @content
     }
 }
+
 

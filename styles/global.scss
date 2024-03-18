@@ -11,7 +11,6 @@
 body {
     font-family: "Avenir Next";
     margin: 0;
-    padding: 0;
 }
 
 h2,
@@ -26,20 +25,19 @@ h6 {
 img {
     max-width: 100%;
 }
-
 .site-header {
-    background-color: $primary-bgcolor;
-    min-width: 26.5625rem;
-    &__container {
+    width: 100%;
+    min-width: 18.75rem;
+    &__nav {
+        background-color: $primary-bgcolor;
         width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0 auto;
-        
+    }
 
+    &__nav-container {
+        display: flex;
+        flex-direction: column;
         @include tablet {
+            margin-left: 3rem;
             flex-direction: row;
             justify-content: flex-start;
             align-items: baseline;
@@ -47,55 +45,61 @@ img {
         }
 
         @include desktop {
+            margin-left: 6rem;
             gap: 2rem;
         }
     }
 
     &__logo {
         display: inline-flex;
-        margin: 1rem;
-        padding: .625rem;
         text-decoration: none;
         color: $primary-header-text-color;
+        justify-content: center;
+        margin: 1rem;
+        margin-top: 1rem;
+        padding: .625rem;
+        text-decoration: none;
         @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-header-text-weight);
     }
 }
 
-.main-nav {
-    &__list {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        @include tablet{
-            display: flex;
-        }
-    }
+.navbar {
+    color: $primary-header-text-color;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-inline-start: 0;
+    list-style: none;
+    text-decoration: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+
 
     &__link {
+        display: inline-block;
+        justify-content: center;
         color: $primary-header-text-color;
+        font-size: 0.87rem;
+        line-height: 4rem;
+        font-weight: 400;
+        margin: auto;
+        padding: 0 2rem;
+        min-width: 50vw;
         text-decoration: none;
-        display: inline-flex;
-        padding: 1rem 5rem;
-        border-bottom: 2px solid transparent;
-        @include text-styles($mobile-subheader-text-size, $mobile-subheader-line-height, $mobile-subheader-text-weight);
-
         @include tablet {
             padding: 2.50rem 0.5rem;
             margin-right: 1.25rem;
+            min-width: 0;
         }
-
         @include desktop {
             margin-right: 2.25rem;
         }
-
         &:hover,
         &--active {
             border-bottom: 4px solid #FFFFFF;
         }
     }
 }
-
 .footer {
     background: $primary-bgcolor;
     &__container {
@@ -200,3 +204,4 @@ img {
 
     }
 }
+

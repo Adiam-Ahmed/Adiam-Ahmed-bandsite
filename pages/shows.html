@@ -10,53 +10,40 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="site-header__container">
-        <a class="site-header__logo" href="./index.html">BANDSITE</a>
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="../index.html"> Biography </a>
+      <nav class="site-header__nav">
+        <div class="site-header__nav-container">
+          <a class="site-header__logo" href="../index.html">BANDSITE</a>
+          <ul class="navbar">
+            <li class="navbar__item">
+              <a class="navbar__link" href="../index.html"> Biography </a>
             </li>
-            <li class="main-nav__item">
-              <a
-                class="main-nav__link main-nav__link--active"
-                href="./shows.html"
-              >
+            <li class="navbar__item">
+              <a class="navbar__link navbar__link--active" href="./shows.html">
                 Shows
               </a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
-    <section class="hero-banner">
-      <h2 class="hero-banner__title">Beautiful Beasts Album</h2>
-      <h1>Stripes of Yellow x For The Stings</h1>
-      <iframe
-        class="soundcloud"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/253186747&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-      ></iframe>
-      <div>
-        <a
-          href="https://soundcloud.com/rupert-holmes-official"
-          title="Rupert Holmes"
-          target="_blank"
-          style="color: #cccccc; text-decoration: none"
-          >Rupert Holmes</a
-        >
-        ·
-        <a
-          href="https://soundcloud.com/rupert-holmes-official/escape-the-pina-colada-song-1"
-          title="Escape (The Pina Colada Song)"
-          target="_blank"
-          style="color: #cccccc; text-decoration: none"
-          >Escape (The Pina Colada Song)</a
-        >
+
+    <section class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__container">
+        <div class="hero__sub-container">
+          <h3 class="hero__subtitle">Beautiful Beasts Album</h3>
+          <h1 class="hero__title">Queen of Yellow x For The Stings</h1>
+        </div>
+        <iframe
+          class="soundcloud"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/253186747&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        ></iframe>
       </div>
     </section>
+
     <main class="shows-container">
       <h2 class="shows-container__header">Shows</h2>
       <div class="shows-list__container"></div>

@@ -6,10 +6,11 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    border: 1px dotted red;
 }
-
-
+body {
+    font-family: "Avenir Next";
+    margin: 0;
+}
 
 .hero-banner {
     background-image: url(../assets/Images/hero-bio.jpg);
@@ -19,12 +20,10 @@
     position: relative;
     height: 50vh;
     min-height: 35vh;
-    min-width: 50rem;
-
+    min-width: 18.75rem;
     @include tablet {
         height: 50vh;
     }
-
     @include desktop {
         height: 80vh;
     }
@@ -34,7 +33,6 @@
         top: 50%;
         left: 0;
         margin: 1.875rem;
-        font-size: 1.30rem;
         color: $primary-header-text-color;
         @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-subheader-text-weight);
 
@@ -50,7 +48,7 @@
 
 .site-main {
     margin: 1.875rem;
-
+    min-width: 18.75rem;
     &__title {
         padding-top: 1.5rem;
         padding-bottom: 1rem;
@@ -81,6 +79,8 @@
         width: 100%;
         padding-bottom: 2rem;
         max-height: 20rem;
+        min-width: 18.75rem;
+        height: auto;
 
         @include tablet {
             max-height: 30rem;
@@ -144,6 +144,7 @@
 
         @include tablet {
             padding-bottom: 2rem;
+      
         }
     }
 
@@ -177,19 +178,14 @@
 }
 
 
-.comment-section {
-    background-color: beige;
-
+.comment-form-section {
+   padding: 20px;
     &__title {
-        margin: 20px;
-        font-size: 3rem;
-    }
-    &__avatar {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        float: left;
-        margin: 20px;
+        @include text-styles($mobile-subheader-text-size, $mobile-subheader-line-height, $mobile-subheader-text-weight);
+        @include tablet{
+            font-size: 3rem;
+            margin: rem;
+        }
     }
 
 }
@@ -201,25 +197,19 @@ label {
 }
 
 input,
-textarea,
-button {
+textarea{
     font-size: 1.25rem;
     padding: 1rem;
     width: 100%;
-    border-radius: 10px;
-    border: 1px solid gray;
+    border-radius: 4px;
+    border: 1px solid $mercury;
+}
+input:active,
+textarea:active {
+    border: 1px solid $primary-bgcolor;
 }
 
 
-.comment-form-section {
-    padding: 2rem;
-    background-color: lightgoldenrodyellow;
-
-    &__title {
-        margin: 0;
-        font-size: 2rem;
-    }
-}
 
 .comment-container {
     display: flex;
@@ -227,26 +217,43 @@ button {
     gap: 20px;
     width: 100%;
     min-width: 230px;
+    border-bottom: 2px solid lightgray;
+    @include desktop{
+        width: 50%;
+        margin: 0 auto;
+    }
 
     &__avatar {
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        margin: 40px 0;
+        width: 36px;
+        height: 36px;
+        float: left;
+        margin: 1rem;
+        @include tablet{
+            width: 48px;
+            height: 48px;
+        }
     }
 }
 
 .comment-form {
-    width: 90%;
+    width: 99%;
     justify-content: center;
+    padding: .75rem;
+    @include tablet{
+        padding: 1rem;
+    }
+
 
     &__label {
         color: grey;
+        padding: .25rem;
     }
 
     &__name-input,
     &__comment-input {
         resize: none;
+        background-color: #FAFAFA;
 
         &::placeholder {
             color: black;
@@ -258,12 +265,18 @@ button {
         background-color: black;
         margin: 15px 0;
         font-size: 1.5rem;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 4px;
+        border: none
+  
+       
     }
 }
 
 .user-comment {
     display: flex;
-    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
     padding: 1.2rem 0;
 
 
@@ -274,12 +287,16 @@ button {
     }
 
     &__avatar {
-        height: 50px;
-        width: 50px;
+        height: 36px;
+        width: 36px;
         border-radius: 50%;
-        margin-right: 1rem;
-        background-color: grey;
+        margin: 1rem;
+        background-color: $mercury;
         min-width: 50px;
+        @include tablet{
+            width: 48px;
+            height: 48px;
+        }
     }
 
     &__details {
