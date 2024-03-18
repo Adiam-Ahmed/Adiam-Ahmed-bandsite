@@ -180,6 +180,14 @@ body {
 
 .comment-form-section {
    padding: 20px;
+    @include tablet {
+            width: 30%;
+            margin: 0 auto;
+        }
+    @include desktop {
+            width: 50%;
+            margin: 0 auto;
+        }
     &__title {
         @include text-styles($mobile-subheader-text-size, $mobile-subheader-line-height, $mobile-subheader-text-weight);
         @include tablet{
@@ -218,10 +226,7 @@ textarea:active {
     width: 100%;
     min-width: 230px;
     border-bottom: 2px solid lightgray;
-    @include desktop{
-        width: 50%;
-        margin: 0 auto;
-    }
+
 
     &__avatar {
         border-radius: 50%;
