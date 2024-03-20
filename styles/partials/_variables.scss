@@ -1,6 +1,55 @@
-$mobile-breakpoint: 573px;
+$mobile-breakpoint: 767px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
+
+//txt weight 
+$bold-txt-weight: 700;
+$regular-txt-weight: 600;
+$light-txt-weight: 400;
+
+//text height 
+$sixty-px-txt-size: 3.75rem;
+$thirty-six-px-txt-size: 2.25rem;
+$twenty-four-px-txt-size: 1.5rem;
+$fourteen-px-txt-size: .875rem;
+$thirteen-px-txt-size: .8125rem;
+
+//line height
+$sixty-eight-px-line-height: 4.25rem;
+$fourth-four-px-line-height: 2.75rem;
+$thirty-two-px-line-height: 2rem;
+$twenty-two-px-line-height: 1.375rem;
+$twenty-px-line-height: 1.25rem;
+$eighteen-px-line-height: 1.125rem;
+
+//button
+$mobile-btn-label-text-size: .625rem;
+$common-btn-label-text-size: .75rem;
+$common-btn-label-line-height: 1.25rem;
+
+//primary color
+$bandsite-black: #323232;
+$sliver-primary-color: #AFAFAF;
+$white-primary-color: #FFFFFF;
+
+//secondary  color
+$bandsite-dark-black: #000000;
+$mercury-secondary-color: #AFAFAF;
+$alabaster-primary-color: #FAFAFA;
+
+
+$mercury: #e1e1e1;
+$primary-bgcolor: #323232;
+$primary-body-bgcolor: #FFFFFF;
+$gallery-bgcolor: #FAFAFA;
+$primary-header-text-color: #FFFFFF;
+$primary-body-text-color: #000000;
+
+
+
+$mobile-body-text-size: .8125rem;
+$mobile-body-line-height: 1.125rem;
+$mobile-body-text-weight: 400;
 
 $mobile-header-text-size: 2.5rem;
 $mobile-header-line-height: 2rem;
@@ -10,29 +59,24 @@ $mobile-subheader-text-size: .875rem;
 $mobile-subheader-line-height: 1.375rem;
 $mobile-subheader-text-weight: 700;
 
-$mobile-body-text-size: .8125rem;
-$mobile-body-line-height: 1.125rem;
-$mobile-body-text-weight: 300;
+$tablet-header-text-size : 3.75rem;
 
-$mobile-btn-label-text-size: .625rem;
-$mobile-btn-label-line-height: 1.25rem;
-$mobile-btn-label-text-weight: 700;
 
-$mercury: #e1e1e1;
+ $mercury: #e1e1e1;
 $primary-bgcolor: #323232;
 $primary-body-bgcolor: #FFFFFF;
 $gallery-bgcolor:#FAFAFA;
 $primary-header-text-color:#FFFFFF;
 $primary-body-text-color: #000000;
 
-$tablet-header-text-size: 1.9rem;
-$tablet-header-line-height: 3rem;
-$tablet-header-text-weight: 700;
+$common-header-text-size: 3.75rem;
+$common-header-line-height: 4.25rem;
 
-$tablet-subheader-text-size: 1.9rem;
-$tablet-subheader-line-height: 3rem;
-$tablet-subheader-text-weight: 600;
 
-$tablet-title-text-size: 1.2rem;
-$tablet-title-line-height: 1rem;
-$tablet-title-text-weight: 600;
+$common-subheader-text-size: 2.25rem;
+$common-subheader-line-height: 2rem;
+
+
+$common-title-text-size: 1.2rem;
+$common-title-line-height: 1.375rem;
+$common-title-text-weight: 400;
