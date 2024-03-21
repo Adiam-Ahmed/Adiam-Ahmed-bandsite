@@ -18,98 +18,105 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    height: 50vh;
     min-height: 35vh;
-    min-width: 18.75rem;
+    min-width: 20rem;
     @include tablet {
         height: 50vh;
     }
     @include desktop {
         height: 80vh;
     }
-
     &__title {
         position: absolute;
         top: 50%;
         left: 0;
         margin: 1.875rem;
         color: $primary-header-text-color;
-        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-subheader-text-weight);
-
+        @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         @include tablet {
-            font-size: 3.4375rem;
+            left: 4%;
+            @include text-styles($sixty-px-txt-size, $fourth-four-px-line-height, $bold-txt-weight);
         }
-
         @include desktop {
-            font-size: 2rem;
+            left: 7%;
+            @include text-styles($seventy-two-px-txt-size, $sixty-eight-px-line-height, $bold-txt-weight);
         }
     }
 }
 
 .site-main {
-    margin: 1.875rem;
-    min-width: 18.75rem;
+    min-width: 20rem;
+
     &__title {
         padding-top: 1.5rem;
         padding-bottom: 1rem;
-
+        margin: 0 2rem;
+        @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         @include tablet {
-            padding-top: 3rem;
-            padding-bottom: 2.25rem;
-            font-size: 2.1875rem;
+            padding: 4rem;
+            margin-left: 6rem;
+            @include text-styles($sixty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         }
     }
-
     &__container {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        padding: 0 1rem;
-
         @include tablet {
             padding: 0 2rem;
         }
+        @include desktop{
+            max-width: 87.5rem;
+            margin: 0 auto;
+        }
     }
-
     &__article {
-        padding: 0 2rem;
-    }
-
+        padding: 0 1.2rem;
+        @include desktop{
+        }
+    } 
     &__img {
         width: 100%;
-        padding-bottom: 2rem;
+        margin: 0;
+        max-width: 100rem;
         max-height: 20rem;
-        min-width: 18.75rem;
         height: auto;
-
         @include tablet {
             max-height: 30rem;
         }
-    }
 
+    }
     &__paragraph {
-        padding-bottom: 1.5rem;
-        @include text-styles($mobile-subheader-text-size, $mobile-subheader-line-height, $mobile-subheader-text-weight);
-        @include text-styles($tablet-header-text-size,$tablet-header-line-height,$tablet-header-text-weight)
-        
+        margin: 0;
+        padding-top: 1rem;
+        @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
+        @include tablet {
+            @include text-styles($thirty-two-px-line-height, $fourth-four-px-line-height, $bold-txt-weight);
+        }
+        @include desktop{
+            margin: 2rem 0;
+            width: 80%;
+        }
     }
 
     &__author {
-        @include text-styles($mobile-subheader-text-size, $mobile-subheader-line-height, $mobile-subheader-text-weight);
+        margin-top: 0;
+        padding-top: 0.5rem;
+        @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         @include tablet {
-            @include text-styles($tablet-subheader-text-size, $tablet-subheader-line-height, $tablet-subheader-text-weight);
+            @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $regular-txt-weight);
         }
     }
 
     &__header {
         padding: 1.5rem 0 0.5rem 0;
-        font-weight: 400;
+        @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         @include tablet {
-            @include text-styles($tablet-title-text-size, $tablet-title-line-height, $tablet-title-text-weight);
+        }
+        @include desktop {
+        @include text-styles($thirty-six-px-txt-size, $thirty-two-px-line-height, $regular-txt-weight);
         }
     }
 
     .site-article {
+        @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $regular-txt-weight);
         @include tablet {
             display: flex;
             gap: 2rem;
@@ -132,7 +139,6 @@ body {
         display: flex;
         flex-direction: column;
         padding: 3rem;
-
         @include tablet {
             padding: 3rem 2rem;
         }
@@ -140,7 +146,7 @@ body {
 
     &__title {
         padding-bottom: 1.25rem; 
-        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $mobile-subheader-text-weight);
+        @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
 
         @include tablet {
             padding-bottom: 2rem;
@@ -181,13 +187,12 @@ body {
 .comment-form-section {
    padding: 20px;
     &__title {
-        @include text-styles($mobile-subheader-text-size, $mobile-subheader-line-height, $mobile-subheader-text-weight);
+        @include text-styles($thirty-two-px-line-height, $thirty-two-px-line-height, $bold-txt-weight);
+        margin-left: 1.5rem;
         @include tablet{
-            font-size: 3rem;
-            margin: rem;
+            @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         }
     }
-
 }
 
 label {
@@ -209,8 +214,6 @@ textarea:active {
     border: 1px solid $primary-bgcolor;
 }
 
-
-
 .comment-container {
     display: flex;
     padding-top: 2rem;
@@ -218,17 +221,19 @@ textarea:active {
     width: 100%;
     min-width: 230px;
     border-bottom: 2px solid lightgray;
+    position: relative;
     @include desktop{
         width: 50%;
         margin: 0 auto;
     }
 
     &__avatar {
+        position: absolute;
+        top: 20%;
+        margin: 1rem;
         border-radius: 50%;
         width: 36px;
         height: 36px;
-        float: left;
-        margin: 1rem;
         @include tablet{
             width: 48px;
             height: 48px;
@@ -238,6 +243,7 @@ textarea:active {
 
 .comment-form {
     width: 99%;
+    margin-left: 3.5rem;
     justify-content: center;
     padding: .75rem;
     @include tablet{
@@ -270,8 +276,20 @@ textarea:active {
         border-radius: 4px;
         border: none;
         cursor: pointer;
+        @include tablet{
+            width: 30%;
+            float: right;
+        }
     }
 }
+.user-comment-entries{
+    @include desktop {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+
 
 .user-comment {
     display: flex;
@@ -303,6 +321,9 @@ textarea:active {
         justify-content: space-between;
         align-items: baseline;
         padding-bottom: 0.8rem;
+    }
+    &__paragraph{
+        @include text-styles($twenty-four-px-txt-size, $thirty-six-px-txt-size, regular-txt-weight);
     }
     &__name{
         font-weight: 600;

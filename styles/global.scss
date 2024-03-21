@@ -6,6 +6,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    // border: 2px dotted red;
 }
 
 body {
@@ -67,10 +68,9 @@ img {
         margin: 1rem;
         padding: .625rem;
         text-decoration: none;
-        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $light-txt-weight);
+        @include text-styles($forty-px-txt-size, $twenty-two-px-line-height, $light-txt-weight);
         @include desktop{
             @include text-styles($sixty-px-txt-size, $sixty-eight-px-line-height, $light-txt-weight);
-            
         }
     }
 }
@@ -78,7 +78,7 @@ img {
 .navbar {
     color: $primary-header-text-color;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0;
     padding-inline-start: 0;
@@ -86,7 +86,7 @@ img {
     text-decoration: none;
     margin-block-start: 0em;
     margin-block-end: 0em;
-    min-width: 319px;
+    min-width: 19.9375rem;
     @include tablet {
         gap: 3rem;
     }
@@ -95,7 +95,7 @@ img {
     }
     &__item{
         flex: 1;
-        padding: 2rem;
+        padding: 1.5rem 1.2rem;
         text-align: center;
         @include tablet {
             padding: 2rem 0;
@@ -126,6 +126,7 @@ img {
 }
 .footer {
     background: $primary-bgcolor;
+
     &__container {
         color: $primary-header-text-color;
         padding: 1rem;
@@ -133,12 +134,11 @@ img {
         flex-direction: column;
         width: 100%;
         @include tablet {
-            margin: 1rem;
+            // margin: 1rem;
             padding: 2rem;
         }
     }
-
-    &__header-container {
+    &__title-container {
         @include tablet {
             padding: 3rem 0;
             display: flex;
@@ -147,41 +147,37 @@ img {
             width: 100%;
         }
     }
-
     &__main-title {
+        @include text-styles($forty-px-txt-size, $twenty-two-px-line-height, $bold-txt-weight);
         @include tablet {
             font-size: 3rem;
         }
     }
-
     &__icons {
         @include tablet {
             padding: 0 1rem;
             max-width: 15rem;
-            width: 25%;
             align-items: center;
         }
 
     }
-
     &__link {
+        margin: 0;
         text-decoration: none;
         color: white;
     }
-
     &__icon {
         width: 35px;
         height: 30px;
-        margin-right: 1.25rem;
+        margin-right: 3rem;
         @include desktop {
-
         }
     }
 
     &__logo {
         text-decoration: none;
         color: $primary-header-text-color;
-        @include text-styles($mobile-header-text-size, $mobile-header-line-height, $light-txt-weight);
+        @include text-styles($forty-px-txt-size, $sixty-eight-px-line-height, $light-txt-weight);
     }
 
     &__logo-right {
@@ -217,12 +213,21 @@ img {
             margin-left: 1.25rem;
             flex: 1 1 33.333%;
         }
-     
-
     }
+    &__column-title{
+        @include text-styles($twenty-four-px-txt-size, $twenty-two-px-line-height, $bold-txt-weight);
+    }
+    &__address-line,
+    &__email,
+    &__booking{
+        @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $light-txt-weight);
+    }
+
     .footer__copyright {
+        @include text-styles($thirteen-px-txt-size, $thirty-two-px-line-height, $light-txt-weight);
         @include tablet {
-            padding-left: 12%;
+            padding-left: 10%;
+            @include text-styles($fourteen-px-txt-size, $thirty-two-px-line-height, $light-txt-weight);
         }
 
     }
