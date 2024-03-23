@@ -6,21 +6,20 @@
     <title>Shows</title>
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/shows.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <script src="../scripts/shows-page.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <nav class="site-header__nav">
         <div class="site-header__nav-container">
-          <a class="site-header__logo" href="../index.html">BANDSITE</a>
+          <a class="site-header__logo" href="./index.html">BANDSITE</a>
           <ul class="navbar">
-            <li class="navbar__item">
+            <li class="navbar__item ">
               <a class="navbar__link" href="../index.html"> Biography </a>
             </li>
-            <li class="navbar__item">
-              <a class="navbar__link navbar__link--active" href="./shows.html">
-                Shows
-              </a>
+            <li class="navbar__item navbar__item--active">
+              <a class="navbar__link" href="./shows.html"> Shows </a>
             </li>
           </ul>
         </div>
@@ -32,7 +31,7 @@
       <div class="hero__container">
         <div class="hero__sub-container">
           <h3 class="hero__subtitle">Beautiful Beasts Album</h3>
-          <h1 class="hero__title">Queen of Yellow x For The Stings</h1>
+          <h1 class="hero__title">Stripes of Yellow x For The Stings</h1>
         </div>
         <iframe
           class="soundcloud"
@@ -48,10 +47,9 @@
       <h2 class="shows-container__header">Shows</h2>
       <div class="shows-list__container"></div>
     </main>
-
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__header-container">
+        <div class="footer__title-container">
           <h2 class="footer__main-title">Get in Touch</h2>
           <div class="footer_icons">
             <a href="https://www.instagram.com" class="footer__link">
@@ -85,35 +83,35 @@
               <div class="footer__address-line">503 Broadway Penthouse,</div>
               <div class="footer__address-line">New York, NY 10012, USA</div>
             </div>
-            <h4 class="footer__email">
+            <div class="footer__email">
               <a class="footer__link" href="mailto:info@thebeesknees.com"
                 >info@thebeesknees.com</a
               >
-            </h4>
+            </div>
           </div>
 
           <div class="footer__column">
             <h3 class="footer__column-title">Limitless Artist Group</h3>
             <div class="footer__booking">Booking Agent for</div>
             <div class="footer__booking">US / South America / Japan</div>
-            <h4 class="footer__email">
+            <div class="footer__email">
               <a class="footer__link" href="mailto:bookings@limitlessag.com"
                 >bookings@limitlessag.com</a
               >
-            </h4>
+            </div>
           </div>
 
           <div class="footer__column">
             <h3 class="footer__column-title">ARCH Entertainment</h3>
             <div class="footer__booking">Booking Agent for</div>
             <div class="footer__booking">UK / EU / AU</div>
-            <h4 class="footer__email">
+            <div class="footer__email">
               <a
                 class="footer__link"
                 href="mailto:bookings@archentertainment.com"
                 >bookings@archentertainment.com</a
               >
-            </h4>
+            </div>
           </div>
         </div>
         <a href="/" class="footer__logo footer__logo-tablet">BANDSITE </a>

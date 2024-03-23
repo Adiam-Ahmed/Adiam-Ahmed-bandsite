@@ -6,6 +6,10 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    
+}
+html{
+    min-width: 320px;;
 }
 body {
     font-family: "Avenir Next";
@@ -18,26 +22,26 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    min-height: 35vh;
+    min-height: 45vh;
     min-width: 20rem;
     @include tablet {
-        height: 50vh;
-    }
-    @include desktop {
         height: 80vh;
     }
     &__title {
         position: absolute;
-        top: 50%;
+        top: 32.5%;
         left: 0;
         margin: 1.875rem;
         color: $primary-header-text-color;
-        @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
+        @include text-styles($thirty-six-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         @include tablet {
-            left: 4%;
-            @include text-styles($sixty-px-txt-size, $fourth-four-px-line-height, $bold-txt-weight);
+            margin: 0;
+            top: 45%;
+            left: 7%;
+            @include text-styles($seventy-two-px-txt-size, $fourth-four-px-line-height, $bold-txt-weight);
         }
         @include desktop {
+            height: 50%;
             left: 7%;
             @include text-styles($seventy-two-px-txt-size, $sixty-eight-px-line-height, $bold-txt-weight);
         }
@@ -48,14 +52,15 @@ body {
     min-width: 20rem;
 
     &__title {
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
-        margin: 0 2rem;
-        @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
+        padding: 1.5rem;
+        @include text-styles($thirty-six-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         @include tablet {
-            padding: 4rem;
-            margin-left: 6rem;
-            @include text-styles($sixty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
+            padding: 2rem 0;
+            margin-left: 3rem;
+            @include text-styles($forty-px-txt-size, $thirty-two-px-line-height,$bold-txt-weight);
+        }
+        @include desktop {
+            margin-left: 5rem;
         }
     }
     &__container {
@@ -68,8 +73,9 @@ body {
         }
     }
     &__article {
-        padding: 0 1.2rem;
+        padding: 0 3rem;
         @include desktop{
+            padding: 0 10%;
         }
     } 
     &__img {
@@ -88,7 +94,7 @@ body {
         padding-top: 1rem;
         @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         @include tablet {
-            @include text-styles($thirty-two-px-line-height, $fourth-four-px-line-height, $bold-txt-weight);
+            @include text-styles($thirty-px-txt-size, $thirty-two-px-line-height, $regular-txt-weight);
         }
         @include desktop{
             margin: 2rem 0;
@@ -101,7 +107,7 @@ body {
         padding-top: 0.5rem;
         @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         @include tablet {
-            @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $regular-txt-weight);
+            @include text-styles($twenty-px-txt-size, $thirty-two-px-line-height, $regular-txt-weight);
         }
     }
 
@@ -119,14 +125,13 @@ body {
         @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $regular-txt-weight);
         @include tablet {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
         }
-
         &__paragraph {
-            flex: 50%;
-
             @include tablet {
+                @include text-styles($twenty-px-txt-size, $thirty-two-px-line-height, $light-txt-weight);
                 padding-top: 1rem;
+                flex: 1;
             }
         }
     }
@@ -138,19 +143,23 @@ body {
     &__container {
         display: flex;
         flex-direction: column;
-        padding: 3rem;
+        padding:1.5rem 1rem;
         @include tablet {
             padding: 3rem 2rem;
+        }
+        @include desktop{
+            margin-left: 3rem;
         }
     }
 
     &__title {
         padding-bottom: 1.25rem; 
         @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
-
         @include tablet {
             padding-bottom: 2rem;
-      
+        }
+        @include desktop{
+            @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
         }
     }
 
@@ -161,12 +170,10 @@ body {
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
-
         @include tablet {
             gap: 1.2rem;
         }
     }
-
     &__image {
         display: block;
         width: 100%;
@@ -182,15 +189,15 @@ body {
         }
     }
 }
-
-
 .comment-form-section {
    padding: 20px;
     &__title {
         @include text-styles($thirty-two-px-line-height, $thirty-two-px-line-height, $bold-txt-weight);
-        margin-left: 1.5rem;
         @include tablet{
             @include text-styles($forty-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
+        }
+        @include desktop{
+            margin-left: 3.5rem;
         }
     }
 }

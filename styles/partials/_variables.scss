@@ -2,15 +2,28 @@ $mobile-breakpoint: 767px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
+$mobile-subheader-text-size: .875rem;
+$mobile-subheader-line-height: 1.375rem;
+$tablet-header-text-size : 3.75rem;
+$mobile-header-text-size: 2.5rem;
+$mobile-header-text-weight: 400;
+$mobile-body-text-size: .8125rem;
+$mobile-body-line-height: 1.125rem;
+$mobile-body-text-weight: 400;
+
 //txt weight 
 $bold-txt-weight: 700;
 $regular-txt-weight: 600;
 $light-txt-weight: 400;
 
 //text height 
+$seventy-two-px-txt-size: 4.5rem;
 $sixty-px-txt-size: 3.75rem;
+$forty-px-txt-size: 40px;
 $thirty-six-px-txt-size: 2.25rem;
+$thirty-px-txt-size: 1.875rem;
 $twenty-four-px-txt-size: 1.5rem;
+$twenty-px-txt-size: 1.25rem;
 $fourteen-px-txt-size: .875rem;
 $thirteen-px-txt-size: .8125rem;
 
@@ -34,8 +47,8 @@ $white-primary-color: #FFFFFF;
 
 //secondary  color
 $bandsite-dark-black: #000000;
-$mercury-secondary-color: #AFAFAF;
-$alabaster-primary-color: #FAFAFA;
+$silver-primary-color: #AFAFAF;
+$alabaster-secondary-color: #FAFAFA;
 
 
 $mercury: #e1e1e1;
@@ -45,38 +58,20 @@ $gallery-bgcolor: #FAFAFA;
 $primary-header-text-color: #FFFFFF;
 $primary-body-text-color: #000000;
 
-
-
-$mobile-body-text-size: .8125rem;
-$mobile-body-line-height: 1.125rem;
-$mobile-body-text-weight: 400;
-
-$mobile-header-text-size: 2.5rem;
-$mobile-header-line-height: 2rem;
-$mobile-header-text-weight: 400;
-
-$mobile-subheader-text-size: .875rem;
-$mobile-subheader-line-height: 1.375rem;
-$mobile-subheader-text-weight: 700;
-
-$tablet-header-text-size : 3.75rem;
-
-
- $mercury: #e1e1e1;
 $primary-bgcolor: #323232;
 $primary-body-bgcolor: #FFFFFF;
 $gallery-bgcolor:#FAFAFA;
 $primary-header-text-color:#FFFFFF;
 $primary-body-text-color: #000000;
 
-$common-header-text-size: 3.75rem;
-$common-header-line-height: 4.25rem;
+// $common-header-text-size: 3.75rem;
+// $common-header-line-height: 4.25rem;
 
 
-$common-subheader-text-size: 2.25rem;
-$common-subheader-line-height: 2rem;
+// $common-subheader-text-size: 2.25rem;
+// $common-subheader-line-height: 2rem;
 
 
-$common-title-text-size: 1.2rem;
-$common-title-line-height: 1.375rem;
-$common-title-text-weight: 400;
+// $common-title-text-size: 1.2rem;
+// $common-title-line-height: 1.375rem;
+// $common-title-text-weight: 400;

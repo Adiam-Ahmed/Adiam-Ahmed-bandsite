@@ -6,7 +6,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    // border: 1px solid red;
 }
 
 body{
@@ -20,6 +19,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-width: 20rem;
     width: 100%;
     padding-bottom: 2rem;
     position: relative;
@@ -39,38 +39,45 @@ body{
     &__container {
         display: flex;
         flex-direction: column;
-        margin: 0 auto;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         max-width: 100rem;
         position: relative;
         z-index: 1;
+        padding: 1.5rem;
 
         @include tablet {
             padding: 3rem;
-            margin-left: 3rem;
         }
-
         @include desktop {
+            max-width: 100rem;
+            align-items: last baseline;
+            width: 90%;
+            top:30%;
+            left:6%;
+            height: 50%;
             flex-direction: row;
-
         }
     }
-
+    &__sub-container{
+        width: 50%
+    }
+    &__subtitle {
+        @include text-styles($twenty-four-px-txt-size, $twenty-two-px-line-height, $light-txt-weight);
+    }
     &__title,
     &__subtitle {
-        padding: 1rem 0;
         color: $primary-header-text-color;
-
         @include tablet {
-            max-width: 35rem;
-        }
-        @include desktop {
-            margin-bottom: 1rem;
-            font-size: 32px;
+            max-width: 40rem;
         }
     }
-
+    &__title {
+        @include text-styles($thirty-px-txt-size, $fourth-four-px-line-height, $bold-txt-weight);
+        @include desktop {
+            @include text-styles($sixty-px-txt-size, $sixty-eight-px-line-height, $bold-txt-weight);
+        }
+    }
     &__desktop-container {
         display: flex;
         justify-content: space-between;
@@ -78,6 +85,7 @@ body{
 }
 
 .soundcloud{
+    position: relative;
     font-size: 10px;
     color: #cccccc;
     line-break: anywhere;
@@ -85,34 +93,51 @@ body{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-    Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
     font-weight: 100;
-    width: 60%;
-    height: 166;
+    height: 10.375rem;
+    width: 90%;
     @include tablet{
         width: 40%;
-    
+    }
+    @include desktop {
+        margin-left: 2rem;
+        top: 30%;
     }
 }
+
 .shows-container{
-    padding: 30px 0;
+    @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
+    padding: 1rem 0 ;
+    @include tablet{
+        padding: 3rem;
+    }
+    @include desktop{
+        display: flex;
+        justify-content: space-around;
+    }
     &__header{
-        font-size:2rem ;
+        margin-left: 1.5rem;
         font-weight: 700;
-        margin-left: 2rem;
+        @include tablet{
+            margin-left: 2rem;
+            @include text-styles($sixty-px-txt-size, $fourth-four-px-line-height, $bold-txt-weight);
+        }
+        @include desktop{
+            margin: 0;
+            padding-top: 2rem; 
+        }
     }
 }
 .shows-list__container{
     display: flex;
     flex-direction: column;
-    
 }
 .show{
     border-bottom: 1px solid grey;
     @include tablet{
-        margin: 0 10px;
+        margin: 0;
         padding: 10px;
+        width: 100%;
     }
 
     &:hover {
@@ -124,43 +149,58 @@ body{
     }
     &__info{
         list-style: none;
-    @include tablet{
-        padding: 0;
-        margin: 0 1.8rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+        padding: 0 1.5rem;
+        @include tablet{
+            width: 95%;
+            padding: 0;
+            margin: 0 1.8rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
     &__info--tablet{
         min-width: 8rem;
     }
     &__info-item{
         padding: 20px 0;
-        color: grey;
+        color: $silver-primary-color;
+        @include text-styles($twenty-four-px-txt-size, $twenty-two-px-line-height, $regular-txt-weight);
         @include tablet{
             display: none;
         }
     }
     &__info-day{
-        font-weight: 700;
+        @include text-styles($twenty-four-px-txt-size, $thirty-px-txt-size, $bold-txt-weight);
+        @include tablet{
+            @include text-styles($twenty-px-line-height, $twenty-two-px-line-height, $regular-txt-weight);
+            margin-right: 1.25rem
+        }
     }
     &__info-location{
-        font-weight: 600;
+        @include text-styles($twenty-four-px-txt-size, $twenty-two-px-line-height, $regular-txt-weight);
+        @include tablet {
+            margin-right: 1.25rem
+        }
+
+
     }
     &__button-get-ticket{
-        padding: 15px;
+        text-transform: uppercase;
+        padding:1.8rem;
         border: none;
-        margin-bottom: 30px;
-        border-radius: 5px;
-        background-color: black;
+        border-radius: 4px;
+        background-color: $bandsite-black;
         color: white;
-        width: 90%;
-        margin: 1rem 2rem;
+        width: 100%;
+        margin: 1rem 0;
+        cursor: pointer;
+        @include text-styles($thirty-px-txt-size, $eighteen-px-line-height, $regular-txt-weight);
+        min-width: 40px;
         @include tablet{
-            padding: 16px 16px;
-            width: 180px;
+            width: 15rem;
+            @include text-styles($twenty-px-line-height, $twenty-two-px-line-height, $regular-txt-weight);
         }
     }
 }
@@ -171,16 +211,16 @@ body{
         margin: 0 0.5rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         text-transform: uppercase;
         list-style: none;
         align-items: center;
+        justify-content: space-between;
+        width: 63%;
     }
     &__item{
     @include tablet {
         color: #afafaf;
-        min-width: 17rem;
-        padding-top: 2rem;
+        padding: 2rem 1.2rem;
         font-weight: 600;
     }
     }
