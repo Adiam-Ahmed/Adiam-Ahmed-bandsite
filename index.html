@@ -34,7 +34,7 @@
 
     <main class="site-main">
       <h2 class="site-main__title">About the Musicians</h2>
-      <section class="site-main__container">
+      <div class="site-main__container">
         <article class="site-main__article">
           <img
             class="site-main__img"
@@ -73,7 +73,7 @@
             </p>
           </div>
         </article>
-      </section>
+      </div>
     </main>
 
     <section class="gallery">
@@ -83,38 +83,47 @@
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-1.jpg"
+            alt="people enjoying concert"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-2.jpg"
+            alt="female rasing her hands and enjoying concert"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-3.jpg"
+            alt="Rasing hands in concert"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-4.jpg"
+            alt="female enjoying concert"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-5.jpg"
+            alt="Rasing hands in concert"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-6.jpg"
+            alt="singer singing "
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-7.jpg"
+            alt="concert"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-8.jpg"
+            alt="DJ set"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-9.jpg"
+            alt="concert"
           />
         </figure>
       </div>
@@ -147,7 +156,6 @@
             <label for="commentId" class="comment-form__label">COMMENT</label>
             <textarea
               class="comment-form__comment-input"
-              type="text"
               name="userComment"
               id="commentId"
               rows="5"
@@ -159,7 +167,7 @@
           </div>
         </form>
       </div>
-      <section class="user-comment-entries"></section>
+      <div class="user-comment-entries"></div>
     </section>
 
     <footer class="footer">
@@ -167,21 +175,33 @@
         <div class="footer__title-container">
           <h2 class="footer__main-title">Get in Touch</h2>
           <div class="footer_icons">
-            <a href="https://www.instagram.com" class="footer__link">
+            <a
+              href="https://www.instagram.com"
+              class="footer__link"
+              aria-label="instagram"
+            >
               <img
                 class="footer__icon"
                 src="./assets/Icons/SVG/Icon-instagram.svg"
                 alt="instagram"
               />
             </a>
-            <a href="https://www.facebook.com" class="footer__link">
+            <a
+              href="https://www.facebook.com"
+              class="footer__link"
+              aria-label="facebook"
+            >
               <img
                 class="footer__icon"
                 src="./assets/Icons/SVG/Icon-facebook.svg"
                 alt="facebook"
               />
             </a>
-            <a href="https://www.twitter.com" class="footer__link">
+            <a
+              href="https://www.twitter.com"
+              class="footer__link"
+              aria-label="twitter"
+            >
               <img
                 class="footer__icon"
                 src="./assets/Icons/SVG/Icon-twitter.svg"
@@ -189,7 +209,12 @@
               />
             </a>
           </div>
-          <a href="/" class="footer__logo footer__logo-right">BANDSITE</a>
+          <a
+            href="/"
+            class="footer__logo footer__logo-right"
+            aria-label="bandSite"
+            >BANDSITE</a
+          >
         </div>
         <div class="footer__column-container">
           <div class="footer__column">
@@ -199,7 +224,10 @@
               <div class="footer__address-line">New York, NY 10012, USA</div>
             </div>
             <div class="footer__email">
-              <a class="footer__link" href="mailto:info@thebeesknees.com"
+              <a
+                class="footer__link"
+                href="mailto:info@thebeesknees.com"
+                aria-label="email info for BandSite"
                 >info@thebeesknees.com</a
               >
             </div>
@@ -210,7 +238,10 @@
             <div class="footer__booking">Booking Agent for</div>
             <div class="footer__booking">US / South America / Japan</div>
             <div class="footer__email">
-              <a class="footer__link" href="mailto:bookings@limitlessag.com"
+              <a
+                class="footer__link"
+                href="mailto:bookings@limitlessag.com"
+                aria-label="email booking for US / South America / Japan BandSite"
                 >bookings@limitlessag.com</a
               >
             </div>
@@ -224,12 +255,18 @@
               <a
                 class="footer__link"
                 href="mailto:bookings@archentertainment.com"
+                aria-label="email booking for UK / EU / AU BandSite"
                 >bookings@archentertainment.com</a
               >
             </div>
           </div>
         </div>
-        <a href="/" class="footer__logo footer__logo-tablet">BANDSITE </a>
+        <a
+          href="/"
+          class="footer__logo footer__logo-tablet"
+          aria-label="BandSite"
+          >BANDSITE
+        </a>
         <p class="footer__copyright">
           Copyright The Bees Knees © 2023 All Rights Reserved.
         </p>
