@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shows</title>
-    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/partials/global.css" />
     <link rel="stylesheet" href="../styles/shows.css" />
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <script src="../scripts/band-site-api.js" defer></script>
@@ -14,13 +14,30 @@
     <header class="site-header">
       <nav class="site-header__nav">
         <div class="site-header__nav-container">
-          <a class="site-header__logo" href="./index.html">BANDSITE</a>
+          <a
+            class="site-header__logo"
+            href="./index.html"
+            aria-label="BandSite homepage"
+            >BANDSITE</a
+          >
           <ul class="navbar">
-            <li class="navbar__item ">
-              <a class="navbar__link" href="../index.html"> Biography </a>
+            <li class="navbar__item">
+              <a
+                class="navbar__link"
+                href="../index.html"
+                aria-label="Biography link"
+              >
+                Biography
+              </a>
             </li>
             <li class="navbar__item navbar__item--active">
-              <a class="navbar__link" href="./shows.html"> Shows </a>
+              <a
+                class="navbar__link"
+                href="./shows.html"
+                aria-label="Shows Link"
+              >
+                Shows
+              </a>
             </li>
           </ul>
         </div>
@@ -51,21 +68,33 @@
         <div class="footer__title-container">
           <h2 class="footer__main-title">Get in Touch</h2>
           <div class="footer_icons">
-            <a href="https://www.instagram.com" class="footer__link">
+            <a
+              href="https://www.instagram.com"
+              class="footer__link"
+              aria-label="instagram link"
+            >
               <img
                 class="footer__icon"
                 src="../assets/Icons/SVG/Icon-instagram.svg"
                 alt="instagram"
               />
             </a>
-            <a href="https://www.facebook.com" class="footer__link">
+            <a
+              href="https://www.facebook.com"
+              class="footer__link"
+              aria-label="facebook Link"
+            >
               <img
                 class="footer__icon"
                 src="../assets/Icons/SVG/Icon-facebook.svg"
                 alt="facebook"
               />
             </a>
-            <a href="https://www.twitter.com" class="footer__link">
+            <a
+              href="https://www.twitter.com"
+              class="footer__link"
+              aria-label="twitter Link"
+            >
               <img
                 class="footer__icon"
                 src="../assets/Icons/SVG/Icon-twitter.svg"
@@ -73,7 +102,12 @@
               />
             </a>
           </div>
-          <a href="/" class="footer__logo footer__logo-right">BANDSITE</a>
+          <a
+            href="/"
+            class="footer__logo footer__logo-right"
+            aria-label="BandSite Link"
+            >BANDSITE</a
+          >
         </div>
         <div class="footer__column-container">
           <div class="footer__column">
@@ -83,7 +117,10 @@
               <div class="footer__address-line">New York, NY 10012, USA</div>
             </div>
             <div class="footer__email">
-              <a class="footer__link" href="mailto:info@thebeesknees.com"
+              <a
+                class="footer__link"
+                href="mailto:info@thebeesknees.com"
+                aria-label="email info for BandSite"
                 >info@thebeesknees.com</a
               >
             </div>
@@ -94,7 +131,10 @@
             <div class="footer__booking">Booking Agent for</div>
             <div class="footer__booking">US / South America / Japan</div>
             <div class="footer__email">
-              <a class="footer__link" href="mailto:bookings@limitlessag.com"
+              <a
+                class="footer__link"
+                href="mailto:bookings@limitlessag.com"
+                aria-label="email booking for US / South America / Japan BandSite"
                 >bookings@limitlessag.com</a
               >
             </div>
@@ -108,12 +148,13 @@
               <a
                 class="footer__link"
                 href="mailto:bookings@archentertainment.com"
+                aria-label="email booking for UK / EU / AU BandSite"
                 >bookings@archentertainment.com</a
               >
             </div>
           </div>
         </div>
-        <a href="/" class="footer__logo footer__logo-tablet">BANDSITE </a>
+        <a href="/" class="footer__logo footer__logo-tablet" aria-label="BandSite">BANDSITE </a>
         <p class="footer__copyright">
           Copyright The Bees Knees © 2023 All Rights Reserved.
         </p>
