@@ -17,7 +17,6 @@ function createTabletDiv() {
         { text: 'Date', className: 'shows-tablet__item' },
         { text: 'Venue', className: 'shows-tablet__item' },
         { text: 'Location', className: 'shows-tablet__item' },
-        // { text: '', className: 'shows-tablet__item' }
     ];
 
     items.forEach(item => {
