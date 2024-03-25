@@ -1,36 +1,6 @@
 const showListContainer = document.querySelector('.shows-list__container');
-const events = [
-    {
-        date: "Mon Sept 09 2024",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Tue Sept 17 2024",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Sat Oct 12 2024",
-        venue: "View Lounge",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Sat Nov 16 2024",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Fri Nov 29 2024",
-        venue: "Moscow Center",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Wed Dec 18 2024",
-        venue: "Press Club",
-        location: "San Francisco, CA"
-    }
-];
+const showData = new BandsiteApi(apiKey);
+
 function createTabletList(innerText, className) {
     const listItem = document.createElement('li');
     listItem.classList.add(className);
@@ -55,8 +25,18 @@ function createTabletDiv() {
         showsTablet.appendChild(listItem);
     });
 }
+async function fetchDate() {
+    try {
+        const showDates = await showData.getShowDates();
+        console.log(showDates)
+        renderShow(showDates);
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
+}
 
-function renderShow() {
+
+function renderShow(events) {
     events.forEach(event => {
         const showDiv = document.createElement('div');
         showDiv.classList.add('show');
@@ -74,7 +54,9 @@ function renderShow() {
         const showInfoDay = document.createElement('li');
         showInfoDay.classList.add('show__info-day','show__info--tablet');
         showInfo.appendChild(showInfoDay);
-        showInfoDay.innerText = event.date;
+        const date = new Date(event.date)
+        const formattedDate = date.toDateString();
+        showInfoDay.innerText = formattedDate;
 
         const showInfoVenue = document.createElement('li');
         showInfoVenue.classList.add('show__info-item');
@@ -85,7 +67,7 @@ function renderShow() {
         const showInfoLocation = document.createElement('li');
         showInfoLocation.classList.add('show__info-location','show__info--tablet');
         showInfo.appendChild(showInfoLocation);
-        showInfoLocation.innerText = event.venue;
+        showInfoLocation.innerText = event.place;
 
         const showLocation = document.createElement('li');
         showLocation.classList.add('show__info-item');
@@ -124,4 +106,4 @@ function renderShow() {
 }
 
 createTabletDiv()
-renderShow()
+fetchDate()
