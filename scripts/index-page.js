@@ -31,7 +31,22 @@ function renderCommentElement(commentObj) {
     const userCommentDate = document.createElement('time');
     userCommentDate.classList.add('user-comment__date');
     const commentDate = new Date(commentObj.timestamp);
-    const formattedDate = `${commentDate.getDate()} / 0${commentDate.getMonth()} / ${commentDate.getFullYear()}`;
+    console.log(commentObj.timestamp)
+    const currentDate = new Date();
+    const timeDifferenceDays = Math.floor((currentDate - commentDate) / (1000 * 60 * 60 * 24))
+    let formattedDate
+
+    //Moment.js to Parse, validate, manipulate, and display dates and times in JavaScript
+
+    if (timeDifferenceDays < 1 ){
+        formattedDate = moment(commentObj.timestamp).fromNow();
+    }else if (timeDifferenceDays < 2){
+        formattedDate = moment().subtract(1, 'days').fromNow();;
+    }else if (timeDifferenceDays < 30){
+        formattedDate = `${timeDifferenceDays} days ago`
+    }else{
+        formattedDate = `${commentDate.getDate()} / ${commentDate.getMonth() + 1} / ${commentDate.getFullYear()}`
+    }
     userCommentDate.setAttribute('datetime', commentObj.timestamp);
     userCommentDate.innerText = formattedDate;
     userCommentDetails.appendChild(userCommentDate);
