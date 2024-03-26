@@ -6,7 +6,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-
 }
 
 body{
@@ -136,6 +135,9 @@ body{
 .shows-list__container{
     display: flex;
     flex-direction: column;
+    @include desktop{
+        width:80%
+    }
 }
 .show{
     border-bottom: 1px solid grey;
@@ -186,6 +188,7 @@ body{
     &__info-location{
         @include text-styles($twenty-four-px-txt-size, $twenty-two-px-line-height, $light-txt-weight);
         @include tablet {
+            @include text-styles($twenty-px-txt-size, $twenty-two-px-line-height, $light-txt-weight);
             margin-right: 1.25rem
         }
 
@@ -201,12 +204,13 @@ body{
         width: 100%;
         margin: 1rem 0;
         cursor: pointer;
-        @include text-styles($thirty-px-txt-size, $eighteen-px-line-height, $regular-txt-weight);
+        @include text-styles($mobile-btn-label-text-size, $common-btn-label-line-height, $regular-txt-weight);
         min-width: 40px;
         @include tablet{
-            width: 140px;
+            margin-right: 1rem;
+            width: 8.75rem;
             padding: 1.2rem;
-            @include text-styles($thirteen-px-txt-size, $eighteen-px-line-height, $regular-txt-weight);
+            @include text-styles($common-btn-label-text-size, $common-btn-label-line-height, $regular-txt-weight);
         }
     }
 }
@@ -214,14 +218,17 @@ body{
 .shows-tablet{
     display: none;
     @include tablet{
-        margin: 0 0.5rem;
+        // margin: 0 0.5rem;
         display: flex;
         flex-direction: row;
         text-transform: uppercase;
         list-style: none;
         align-items: center;
         justify-content: space-between;
-        width: 63%;
+        width: 70%;
+    @include desktop{
+        width: 70%;
+    }
     }
     &__item{
     @include tablet {

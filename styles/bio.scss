@@ -218,7 +218,7 @@ textarea{
 }
 input:active,
 textarea:active {
-    border: 1px solid $primary-bgcolor;
+    border: 1px solid $bandsite-black;
 }
 
 .comment-container {
@@ -258,7 +258,7 @@ textarea:active {
 
 
     &__label {
-        color: grey;
+        color: $silver-primary-color;
         padding: .25rem;
     }
 
@@ -276,13 +276,14 @@ textarea:active {
         color: white;
         background-color: black;
         margin: 15px 0;
-        font-size: 1.5rem;
         padding: 1rem;
         width: 100%;
         border-radius: 4px;
         border: none;
         cursor: pointer;
+        @include text-styles($mobile-btn-label-text-size, $common-btn-label-line-height, $regular-txt-weight);
         @include tablet{
+            @include text-styles($common-btn-label-text-size, $common-btn-label-line-height, $regular-txt-weight);
             width: 30%;
             float: right;
         }
@@ -339,7 +340,7 @@ textarea:active {
 
     }
     &__date{
-        color: grey;
+        color: $silver-primary-color;
     
     }
     &__like-div{
@@ -368,4 +369,7 @@ textarea:active {
             background-color: red;
         }
     }
+}
+.errors {
+    border: 1px solid red;
 }

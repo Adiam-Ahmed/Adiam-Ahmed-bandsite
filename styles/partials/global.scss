@@ -1,6 +1,6 @@
-@use "./partials/typography" as *;
-@use "./partials/variables" as *;
-@use "./partials/mixins" as *;
+@use "../partials/typography" as *;
+@use "../partials/variables" as *;
+@use "../partials/mixins" as *;
 
 *,
 *::before,
@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: "Avenir Next";
+    font-family: "Avenir Next", Arial, sans-serif;
     margin: 0;
 }
 
@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Avenir Next";
+    font-family: "Avenir Next", Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -32,7 +32,7 @@ img {
 
     }
     &__nav {
-        background-color: $primary-bgcolor;
+        background-color: $bandsite-black;
         @include tablet {
             align-items: center;
         }
@@ -120,7 +120,7 @@ img {
     }
 }
 .footer {
-    background: $primary-bgcolor;
+    background: $bandsite-black;
 
     &__container {
         color: $primary-header-text-color;
