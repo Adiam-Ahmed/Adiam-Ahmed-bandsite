@@ -83,6 +83,7 @@ body {
         max-width: 100rem;
         max-height: 20rem;
         height: auto;
+        min-width: 250px;
         @include tablet {
             max-height: 30rem;
         }

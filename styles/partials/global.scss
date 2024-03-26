@@ -121,7 +121,7 @@ img {
 }
 .footer {
     background: $bandsite-black;
-
+    min-width: 20rem;
     &__container {
         color: $primary-header-text-color;
         padding: 1rem;

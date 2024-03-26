@@ -110,6 +110,7 @@ body{
 }
 
 .shows-container{
+    min-width: 20rem;
     @include text-styles($twenty-four-px-txt-size, $thirty-two-px-line-height, $bold-txt-weight);
     padding: 1rem 0 ;
     @include tablet{
@@ -204,7 +205,7 @@ body{
         width: 100%;
         margin: 1rem 0;
         cursor: pointer;
-        @include text-styles($mobile-btn-label-text-size, $common-btn-label-line-height, $regular-txt-weight);
+        @include text-styles($twenty-four-px-txt-size, $common-btn-label-line-height, $regular-txt-weight);
         min-width: 40px;
         @include tablet{
             margin-right: 1rem;
