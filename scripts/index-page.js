@@ -31,7 +31,6 @@ function renderCommentElement(commentObj) {
     const userCommentDate = document.createElement('time');
     userCommentDate.classList.add('user-comment__date');
     const commentDate = new Date(commentObj.timestamp);
-    console.log(commentObj.timestamp)
     const currentDate = new Date();
     const timeDifferenceDays = Math.floor((currentDate - commentDate) / (1000 * 60 * 60 * 24))
     let formattedDate
@@ -128,15 +127,34 @@ commentForm.addEventListener('submit', async (e) => {
     const userNameVal = e.target.userName.value
     const commentVal = e.target.userComment.value
 
+    const userNameInput = e.target.userName
+    const commentInput = e.target.userComment
+
+    userNameInput.classList.remove('errors')
+    commentInput.classList.remove('errors')
+
+    let errors = false;
+
+    if (userNameVal === "") {
+        userNameInput.classList.add("errors");
+        errors = true;
+    }
+    if (commentVal === "") {
+        commentInput.classList.add("errors");
+        errors = true;
+    }
+
+    if (errors) {
+        return false;
+    }
+
     const newCommentsObj = {
         name: userNameVal,
         comment: commentVal
 
     };
-    console.log(newCommentsObj)
     try {
         const newCommentData = await commentData.postComments(newCommentsObj);
-        console.log("New comment check", newCommentData);
         getAllComments();
     } catch (error) {
         console.log("hopefully no error")
