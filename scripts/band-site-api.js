@@ -40,7 +40,6 @@ class BandsiteApi {
         const postCommentEndPoint = 'comments';
         try {
             const postResponse = await axios.post(`${this.baseUrl}${postCommentEndPoint}?api_key=${this.apiKey}`, userComment)
-            console.log("Post response:", postResponse.data);
             return postResponse.data;
         } catch (error) {
             console.log('Sorry, data could not be fetched')

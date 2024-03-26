@@ -118,9 +118,6 @@ async function getAllComments() {
     }
 
 }
-
-
-
 commentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 

@@ -27,7 +27,6 @@ function createTabletDiv() {
 async function fetchDate() {
     try {
         const showDates = await showData.getShowDates();
-        console.log(showDates)
         renderShow(showDates);
     } catch (error) {
         console.error('An error occurred:', error);
