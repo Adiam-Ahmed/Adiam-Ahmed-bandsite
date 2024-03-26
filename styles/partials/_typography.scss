@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Avenir Next";
     src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"),
-    url("../../assets/Font/Alternative_font/AvenirNextLTPro.ttf") format("truetype");
+    url("../assets/Font/Alternative_font/AvenirNextLTPro.ttf") format("truetype");
     font-weight: 400;
 }
 
@@ -17,7 +17,4 @@
     src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype"),
     url("../assets/Font/Alternative_font/AvenirNextLTProBold.ttf") format("truetype");;
     font-weight: 700;
-}
-body {
-    font-family: "Avenir Next", Arial, sans-serif;
 }
