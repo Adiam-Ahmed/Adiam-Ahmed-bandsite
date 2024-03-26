@@ -38,13 +38,13 @@ function renderCommentElement(commentObj) {
 
     //Moment.js to Parse, validate, manipulate, and display dates and times in JavaScript
 
-    if (timeDifferenceDays < 1 ){
+    if (timeDifferenceDays < 1) {
         formattedDate = moment(commentObj.timestamp).fromNow();
-    }else if (timeDifferenceDays < 2){
+    } else if (timeDifferenceDays < 2) {
         formattedDate = moment().subtract(1, 'days').fromNow();;
-    }else if (timeDifferenceDays < 30){
+    } else if (timeDifferenceDays < 30) {
         formattedDate = `${timeDifferenceDays} days ago`
-    }else{
+    } else {
         formattedDate = `${commentDate.getDate()} / ${commentDate.getMonth() + 1} / ${commentDate.getFullYear()}`
     }
     userCommentDate.setAttribute('datetime', commentObj.timestamp);
@@ -56,11 +56,57 @@ function renderCommentElement(commentObj) {
     commentDiv.classList.add('user-comment__paragraph');
     commentDiv.innerText = commentObj.comment
     commentArticleEl.appendChild(commentDiv);
+
+    const likeDiv = document.createElement('div');
+    likeDiv.classList.add('user-comment__like-div');
+    commentArticleEl.appendChild(likeDiv);
+    const likeBtn = document.createElement('button')
+    likeBtn.classList.add("user-comment__like-btn")
+    likeDiv.appendChild(likeBtn);
+
+    const likeIcon = document.createElement('img');
+    likeIcon.classList.add("user-comment__like-icon");
+    likeIcon.setAttribute('src', '../assets/Icons/SVG/icon-like.svg');
+    likeIcon.setAttribute('alt', 'like button');
+    likeBtn.appendChild(likeIcon);
+
+    const likesDisplay = document.createElement('span');
+    likesDisplay.classList.add('user-comment__likes');
+    likesDisplay.innerText = commentObj.likes;
+    likeDiv.appendChild(likesDisplay);
+
+    const deleteBtn = document.createElement('button')
+    deleteBtn.classList.add("user-comment__delete-btn")
+    likeDiv.appendChild(deleteBtn);
+
+    const deleteIcon = document.createElement('img');
+    deleteIcon.classList.add("user-comment__delete-icon");
+    deleteIcon.setAttribute('src', '../assets/Icons/SVG/icon-delete.svg');
+    deleteIcon.setAttribute('alt', 'delete button');
+    deleteBtn.appendChild(deleteIcon);
+
+
+    likeBtn.addEventListener("click", async () => {
+        try {
+            const likes = await commentData.getLikes(commentObj.id);
+            likesDisplay.innerText = likes;
+        } catch (error) {
+            console.log("Error occurred ");
+        }
+    });
+
+    deleteBtn.addEventListener("click", async () => {
+        try {
+            await commentData.deleteComment(commentObj.id);
+            commentSectionEl.remove();
+        } catch (error) {
+            console.log("Error occurred ");
+        }
+    });
 };
 
 async function getAllComments() {
     try {
-
         const getAllCommentsData = await commentData.getComments();
         commentListElement.innerHTML = '';
         getAllCommentsData.forEach(comment => {
@@ -73,6 +119,7 @@ async function getAllComments() {
     }
 
 }
+
 
 
 commentForm.addEventListener('submit', async (e) => {
