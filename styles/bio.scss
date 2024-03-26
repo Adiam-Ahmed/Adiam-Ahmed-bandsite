@@ -6,7 +6,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    
 }
 html{
     min-width: 320px;;
@@ -210,6 +209,7 @@ label {
 
 input,
 textarea{
+    font-family: "Avenir Next", Arial, sans-serif;
     font-size: 1.25rem;
     padding: 1rem;
     width: 100%;
@@ -227,7 +227,6 @@ textarea:active {
     gap: 20px;
     width: 100%;
     min-width: 230px;
-    border-bottom: 2px solid lightgray;
     position: relative;
     @include desktop{
         width: 50%;
@@ -300,7 +299,7 @@ textarea:active {
 
 .user-comment {
     display: flex;
-    border-bottom: 2px solid lightgray;
+    border-top: 2px solid lightgray;
     padding: 1.2rem 0;
 
 
@@ -331,6 +330,9 @@ textarea:active {
     }
     &__paragraph{
         @include text-styles($twenty-four-px-txt-size, $thirty-six-px-txt-size, regular-txt-weight);
+        @include tablet{
+            @include text-styles($fourteen-px-txt-size, $twenty-two-px-line-height, regular-txt-weight);
+        }
     }
     &__name{
         font-weight: 600;
@@ -340,5 +342,30 @@ textarea:active {
         color: grey;
     
     }
-
+    &__like-div{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap:10px;
+    }
+    &__like-btn,
+    &__delete-btn{
+        align-self: flex-end;
+        border: none;
+        color: transparent;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover{
+            background-color: lightblue;
+        }
+    }
+    &__like-icon{
+        width: 20px;
+        height: 20px;
+    }
+    &__delete-btn{
+        &:hover{
+            background-color: red;
+        }
+    }
 }
