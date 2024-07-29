@@ -1,0 +1,228 @@
+@use "../partials/typography" as *;
+@use "../partials/variables" as *;
+@use "../partials/mixins" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Avenir Next", Arial, sans-serif;
+    margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+.site-header {
+    width: 100%;
+    min-width: 320px;
+    @include tablet {
+
+    }
+    &__nav {
+        background-color: $bandsite-black;
+        @include tablet {
+            align-items: center;
+        }
+        @include desktop {
+            align-items: center;
+        }
+    }
+    &__nav-container {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            padding-top: 1rem;
+            margin-left: 3rem;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: baseline;
+            gap: 1rem;
+        }
+        @include desktop {
+            margin-left: 12%;
+            padding-top: 2rem;
+            width: 50%;
+            gap: 4rem;
+        }
+    }
+    &__logo {
+        display: inline-flex;
+        text-decoration: none;
+        color: $primary-header-text-color;
+        justify-content: center;
+        margin: 1rem;
+        padding: .625rem;
+        text-decoration: none;
+        @include text-styles($forty-px-txt-size, $twenty-two-px-line-height, $light-txt-weight);
+        @include tablet{
+            @include text-styles($thirty-six-px-txt-size, $twenty-two-px-line-height, $regular-txt-weight);
+        }
+    }
+}
+
+.navbar {
+    color: $primary-header-text-color;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding-inline-start: 0;
+    list-style: none;
+    text-decoration: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    min-width: 18rem;
+    @include tablet {
+        gap: 0;
+    }
+    @include desktop {
+        gap: 4rem;
+    }
+    &__item{
+        flex: 1;
+        padding: 1.5rem 0;
+        text-align: center;
+        @include tablet {
+            padding: 2rem 0;
+            flex: 0;
+        }
+        &:hover,
+        &--active {
+            border-bottom: 4px solid #FFFFFF;
+        }
+    }
+    &__link {
+        color: $primary-header-text-color;
+        margin: 1rem;
+        @include text-styles($twenty-four-px-txt-size,$thirty-two-px-line-height,$bold-txt-weight);
+        text-decoration: none;
+        @include tablet {
+        @include text-styles($twenty-four-px-txt-size, $twenty-two-px-line-height, $light-txt-weight);
+        margin: 0;
+        }
+        @include desktop {
+
+        }
+
+    }
+}
+.footer {
+    background: $bandsite-black;
+    min-width: 20rem;
+    &__container {
+        color: $primary-header-text-color;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include tablet {
+            padding: 2rem;
+        }
+    }
+    &__title-container {
+        @include tablet {
+            padding: 1.25rem;
+            display: flex;
+            align-items: baseline;
+            width: 100%;
+            gap: 6%
+        }
+
+    }
+    &__main-title {
+        @include text-styles($forty-px-txt-size, $twenty-two-px-line-height, $bold-txt-weight);
+        @include tablet {
+            @include text-styles($thirty-six-px-txt-size, $twenty-two-px-line-height, $bold-txt-weight);
+        }
+    }
+    &__icons {
+        @include tablet {
+            padding: 0 1rem;
+            max-width: 15rem;
+            align-items: center;
+        }
+
+    }
+    &__link {
+        margin: 0;
+        text-decoration: none;
+        color: white;
+    
+    }
+    &__icon {
+        width: 35px;
+        height: 30px;
+        margin-right: 3rem;
+    }
+    &__logo {
+        text-decoration: none;
+        color: $primary-header-text-color;
+        @include text-styles($forty-px-txt-size, $sixty-eight-px-line-height, $light-txt-weight);
+    }
+
+    &__logo-right {
+        display: none;
+        @include tablet {
+            display:flex;
+            justify-content: flex-end;
+            flex:3;
+        }
+    }
+    &__logo-tablet {
+        @include tablet {
+            display: none;
+        }
+    }
+    &__column-container {
+        display: flex;
+        flex: wrap;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
+        @include desktop {
+            width: 65%;
+            gap: 2rem
+
+        }
+    }
+    &__column {
+        @include tablet {
+            margin-left: 1.25rem;
+            flex: 1 1 33.333%;
+        }
+
+    }
+    &__column-title{
+        @include tablet{
+            @include text-styles($fourteen-px-txt-size, $thirty-two-px-line-height, $regular-txt-weight);
+        }
+
+    }
+
+    &__email{
+        padding: 1rem 0;
+    }
+    .footer__copyright {
+        @include text-styles($thirteen-px-txt-size, $thirty-two-px-line-height, $light-txt-weight);
+        @include tablet {
+            padding: 0 1.25rem;
+            @include text-styles($fourteen-px-txt-size, $thirty-two-px-line-height, $light-txt-weight);
+        }
+
+    }
+}
+

@@ -1,3 +1,44 @@
 .DS_Store
 *.css
 *.css.map
+# Node modules
+/node_modules/
+
+# Compiled CSS
+/styles/*.css
+
+# SCSS cache files
+*.scssc
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Environment files
+.env
+.env.*
+
+# Build directories
+/dist/
+build/
+*.tmp
+
+# System files
+*.swp
+*.swo
+
+# Miscellaneous
+*.bak
+*.tmp
