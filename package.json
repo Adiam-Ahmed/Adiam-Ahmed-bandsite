@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
 "scripts": {
-  "build-css": "sass styles --no-source-map",
-  "create-dist": "mkdir dist && mkdir dist\\pages",
+  "build-css": "sass styles:dist/styles --no-source-map",
+  "create-dist": "mkdir dist && mkdir dist\\pages && mkdir dist\\styles",
   "index-html": "copy index.html dist\\index.html",
   "shows-html": "copy pages\\shows.html dist\\pages\\shows.html",
   "build": "npm run create-dist && npm run build-css && npm run index-html && npm run shows-html"

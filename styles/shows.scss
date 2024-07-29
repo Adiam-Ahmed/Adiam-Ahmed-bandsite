@@ -123,6 +123,7 @@ body{
     &__header{
         margin-left: 1.5rem;
         font-weight: 700;
+        padding-bottom: 1rem;
         @include tablet{
             margin-left: 2rem;
             @include text-styles($sixty-px-txt-size, $fourth-four-px-line-height, $bold-txt-weight);
