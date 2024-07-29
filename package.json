@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
 "scripts": {
-  "build-css": "sass src/scss:dist/styles --no-source-map",
-  "copy-html": "cp src/index.html dist/", 
-  "shows-html": "cp pages/shows.html dist/pages/shows.html",
-  "build": "npm run build-css && npm run copy-html  && npm run shows-html "
+  "build-css": "sass styles --no-source-map",
+  "create-dist": "mkdir dist && mkdir dist\\pages",
+  "index-html": "copy index.html dist\\index.html",
+  "shows-html": "copy pages\\shows.html dist\\pages\\shows.html",
+  "build": "npm run create-dist && npm run build-css && npm run index-html && npm run shows-html"
 },
   "keywords": [],
   "author": "",
