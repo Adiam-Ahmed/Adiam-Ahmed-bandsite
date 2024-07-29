@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass src/scss:styles --no-source-map",
-    "build": "npm run build-css"
-  },
+"scripts": {
+  "build-css": "sass src/scss:dist/styles --no-source-map",
+  "copy-html": "cp src/index.html dist/", 
+  "build": "npm run build-css && npm run copy-html"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
